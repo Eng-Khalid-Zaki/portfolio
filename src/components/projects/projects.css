@@ -1,0 +1,126 @@
+.projects {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 3rem;
+}
+
+.projects > .projects-type {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.projects > .projects-type > button {
+  border: none;
+  width: 135px;
+  padding: 0.5rem 1rem;
+  background-color: var(--bgHeader);
+  opacity: 0.8;
+  color: var(--sub-title);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 6px;
+  text-transform: capitalize;
+}
+
+.projects > .projects-type > button:hover {
+  color: var(--title);
+  font-size: 0.85rem;
+  background-color: var(--bgHeader);
+}
+
+.projects > .projects-type > button.active {
+  color: var(--title);
+  font-size: 0.85rem;
+  font-weight: bold;
+  background-color: var(--bgHeader);
+  border: 1px solid var(--blue);
+}
+
+.projects > .projects-content {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.projects > .projects-content > .project {
+  width: 270px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding-bottom: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.projects > .projects-content > .project:hover {
+  border: 1px solid var(--blue);
+  rotate: 1deg;
+  cursor: pointer;
+}
+
+.projects > .projects-content > .project > img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.projects > .projects-content > .project > .project-info {
+  padding: 0.6rem 0.2rem;
+}
+.projects > .projects-content > .project > .project-info > .project-title {
+  font-size: 1.2rem;
+  color: var(--title);
+  font-weight: bold;
+  margin-bottom: 0.6rem;
+}
+
+.projects
+  > .projects-content
+  > .project
+  > .project-info
+  > .project-description {
+  font-size: 0.9rem;
+  color: var(--sub-title);
+}
+
+.projects > .projects-content > .project > .project-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0.5rem;
+  font-size: 0.9rem;
+}
+
+.projects > .projects-content > .project > .project-links > div {
+  display: flex;
+  gap: 0.5rem;
+  color: var(--sub-title);
+}
+
+.projects > .projects-content > .project > .project-links > span {
+  color: var(--blue);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .projects {
+    flex-direction: column;
+    align-items: center;
+  }
+  .projects > .projects-type {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .projects > .projects-content > .project {
+    width: 100%;
+  }
+}

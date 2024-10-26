@@ -20,11 +20,11 @@ export default function Header({ theme, toggleTheme, screenWidth }) {
       headerClasses = "";
       open && closeHandler();
     } else {
-      headerClasses = " small-screen";
+      headerClasses = "small-screen";
     }
   });
   return (
-    <header className={"devider" + headerClasses}>
+    <header className={headerClasses}>
       {screenWidth <= 700 && (
         <FontAwesomeIcon icon={faBars} onClick={openHandler} />
       )}

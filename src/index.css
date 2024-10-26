@@ -28,6 +28,7 @@ body {
   width: 80%;
   margin: 0 auto;
   background-color: var(--secondary);
+  padding: 0 4.7rem;
 }
 
 .devider {
@@ -43,4 +44,10 @@ a {
   color: initial;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    width: 100%;
+  }
 }
