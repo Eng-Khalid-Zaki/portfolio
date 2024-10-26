@@ -1,0 +1,55 @@
+header {
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-screen {
+  justify-content: space-between;
+}
+
+header > ul {
+  padding: 6px 12px;
+  border-radius: 40px;
+  background-color: var(--bgHeader);
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header > ul > li > a {
+  color: var(--title);
+  opacity: 0.9;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+header > ul > li > a:hover {
+  color: var(--blue);
+  opacity: 1;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+header > .fa-moon,
+header > .fa-sun,
+header > .fa-bars {
+  font-size: 1.2 rem;
+  margin-left: 5px;
+  padding: 10px;
+  background-color: var(--bgHeader);
+  color: var(--sub-title);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid rgba(244, 165, 96, 0.249);
+  transition: all 0.2s ease-in-out;
+}
+
+header > .fa-moon:hover,
+header > .fa-sun:hover,
+header > .fa-bars:hover {
+  color: var(--title);
+  border: 1px solid rgb(244, 165, 96);
+}
