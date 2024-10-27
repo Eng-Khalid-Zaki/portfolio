@@ -25,13 +25,10 @@ export default function Projects() {
             </p>
           </div>
           <div className="project-links">
-            <div>
-              <FontAwesomeIcon icon={faLink} />
-              <FontAwesomeIcon icon={faGithubAlt} />
-            </div>
-            <span>
-              More <FontAwesomeIcon icon={faArrowRight} />
-            </span>
+            <button>Source Code</button>
+            <button>
+              Visis <FontAwesomeIcon icon={faArrowRight} />
+            </button>
           </div>
         </div>
         <div className="project">
@@ -43,13 +40,10 @@ export default function Projects() {
             </p>
           </div>
           <div className="project-links">
-            <div>
-              <FontAwesomeIcon icon={faLink} />
-              <FontAwesomeIcon icon={faGithubAlt} />
-            </div>
-            <span>
-              More <FontAwesomeIcon icon={faArrowRight} />
-            </span>
+            <button>Source Code</button>
+            <button>
+              Visis <FontAwesomeIcon icon={faArrowRight} />
+            </button>
           </div>
         </div>
         <div className="project">
@@ -61,13 +55,10 @@ export default function Projects() {
             </p>
           </div>
           <div className="project-links">
-            <div>
-              <FontAwesomeIcon icon={faLink} />
-              <FontAwesomeIcon icon={faGithubAlt} />
-            </div>
-            <span>
-              More <FontAwesomeIcon icon={faArrowRight} />
-            </span>
+            <button>Source Code</button>
+            <button>
+              Visis <FontAwesomeIcon icon={faArrowRight} />
+            </button>
           </div>
         </div>
         <div className="project">
@@ -81,13 +72,10 @@ export default function Projects() {
             </p>
           </div>
           <div className="project-links">
-            <div>
-              <FontAwesomeIcon icon={faLink} />
-              <FontAwesomeIcon icon={faGithubAlt} />
-            </div>
-            <span>
-              More <FontAwesomeIcon icon={faArrowRight} />
-            </span>
+            <button>Source Code</button>
+            <button>
+              Visit <FontAwesomeIcon icon={faArrowRight} />
+            </button>
           </div>
         </div>
       </div>
