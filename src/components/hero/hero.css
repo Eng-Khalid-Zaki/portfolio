@@ -1,8 +1,9 @@
 .hero {
+  padding-top: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 1.5rem;
+  padding-bottom: 2rem;
 }
 
 .hero-avatar {
@@ -46,7 +47,7 @@
 
 .hero-social {
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 
 .hero-social .fa-github-alt,

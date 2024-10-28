@@ -20,11 +20,11 @@ export default function Contact({ theme, screenWidth }) {
         <form action="">
           <div>
             <label htmlFor="">Email Address</label>
-            <input type="email" />
+            <input required type="email" />
           </div>
           <div>
             <label htmlFor="">Your Message</label>
-            <textarea type="text" />
+            <textarea required type="text" />
           </div>
           <button>Submit</button>
         </form>

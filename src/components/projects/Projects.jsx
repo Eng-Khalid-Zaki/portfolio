@@ -66,6 +66,51 @@ export default function Projects() {
           <div className="project-info">
             <p className="project-title">Project 1</p>
             <p className="project-description">
+              this is the first project! please take a tour in it!
+            </p>
+          </div>
+          <div className="project-links">
+            <button>Source Code</button>
+            <button>
+              Visis <FontAwesomeIcon icon={faArrowRight} />
+            </button>
+          </div>
+        </div>
+        <div className="project">
+          <img src={image} alt="" />
+          <div className="project-info">
+            <p className="project-title">Project 1</p>
+            <p className="project-description">
+              this is the first project! please take a tour in it!
+            </p>
+          </div>
+          <div className="project-links">
+            <button>Source Code</button>
+            <button>
+              Visis <FontAwesomeIcon icon={faArrowRight} />
+            </button>
+          </div>
+        </div>
+        <div className="project">
+          <img src={image} alt="" />
+          <div className="project-info">
+            <p className="project-title">Project 1</p>
+            <p className="project-description">
+              this is the first project! please take a tour in it!
+            </p>
+          </div>
+          <div className="project-links">
+            <button>Source Code</button>
+            <button>
+              Visis <FontAwesomeIcon icon={faArrowRight} />
+            </button>
+          </div>
+        </div>
+        <div className="project">
+          <img src={image} alt="" />
+          <div className="project-info">
+            <p className="project-title">Project 1</p>
+            <p className="project-description">
               this is the first project! please take a tour in it! this is the
               first project! please take a tour in it! this is the first
               project! please take a tour in it!
