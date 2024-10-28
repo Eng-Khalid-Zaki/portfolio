@@ -3,24 +3,22 @@
   display: flex;
   justify-content: space-between;
   align-items: start;
-  gap: 3rem;
+  gap: 2.64rem;
   padding-bottom: 2rem;
 }
 
 .projects > .projects-type {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
-  margin-bottom: 1rem;
-  justify-content: center;
-  align-items: center;
+  gap: 10px;
 }
 .projects > .projects-type > button {
   border: none;
-  width: 135px;
-  padding: 0.5rem 1rem;
+  width: 11rem;
+  padding: 0.75rem 0;
   background-color: var(--bgHeader);
-  opacity: 0.8;
+  font-size: 1.05rem;
+  opacity: 0.5;
   color: var(--sub-title);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -30,15 +28,16 @@
 
 .projects > .projects-type > button:hover {
   color: var(--title);
-  font-size: 0.85rem;
+  opacity: 1;
   background-color: var(--bgHeader);
 }
 
 .projects > .projects-type > button.active {
+  opacity: 1;
+  letter-spacing: 0.6;
+  padding: 0.8rem 0;
   color: var(--title);
-  font-size: 0.85rem;
   font-weight: bold;
-  background-color: var(--bgHeader);
   border: 1px solid var(--blue);
 }
 
@@ -46,13 +45,14 @@
   flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  column-gap: 1rem;
+  row-gap: 2rem;
   justify-content: center;
 }
 
 .projects > .projects-content > .project {
-  width: 270px;
-  height: 400px;
+  width: 300px;
+  height: 450px;
   border: 1px solid #5dbcfc51;
   border-radius: 6px;
   padding-bottom: 0.5rem;
@@ -64,8 +64,7 @@
 
 .projects > .projects-content > .project:hover {
   border: 1px solid var(--blue);
-  /* rotate: 1deg; */
-  /* cursor: pointer; */
+  scale: 1.01;
 }
 
 .projects > .projects-content > .project > img {
@@ -79,14 +78,14 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 0.6rem 0.2rem;
+  padding: 1rem 0.4rem;
   flex-grow: 1;
 }
 .projects > .projects-content > .project > .project-info > .project-title {
   font-size: 1.2rem;
   color: var(--title);
   font-weight: bold;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.7rem;
 }
 
 .projects
@@ -96,6 +95,7 @@
   > .project-description {
   font-size: 0.9rem;
   color: var(--sub-title);
+  margin-bottom: 1.1rem;
 }
 
 .projects > .projects-content > .project > .project-links {
@@ -160,6 +160,8 @@
   .projects > .projects-type {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
   }
   .projects > .projects-content > .project {
     width: 100%;

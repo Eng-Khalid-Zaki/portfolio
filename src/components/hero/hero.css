@@ -8,20 +8,20 @@
 
 .hero-avatar {
   display: flex;
-  gap: 10px;
+  gap: 0.6rem;
   align-items: end;
   margin-bottom: 1.5rem;
 }
 
 .hero-avatar img {
-  width: 4.5rem;
+  width: 88px;
   border-radius: 50%;
   padding: 1px;
   border: 1px solid rgb(238, 225, 195);
 }
 
 .hero-avatar .fa-circle-check {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   color: var(--blue);
 }
 
@@ -29,35 +29,37 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin: 0 0 0.75rem 0;
+  margin: 0 0 2rem 0;
 }
 
 .hero-title {
-  font-size: 2.3rem;
-  line-height: 3rem;
+  font-size: 2.85rem;
+  line-height: 3.3rem;
+  margin: 24px 0;
   font-weight: 500;
   color: var(--title);
 }
 
 .hero-description {
   color: var(--sub-title);
-  line-height: 1.4rem;
+  line-height: 1.65rem;
   font-size: 0.9rem;
 }
 
 .hero-social {
   display: flex;
-  gap: 20px;
+  gap: 1.5rem;
 }
 
 .hero-social .fa-github-alt,
 .hero-social .fa-linkedin-in {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: var(--sub-title);
 }
 .hero-social .fa-github-alt:hover,
 .hero-social .fa-linkedin-in:hover {
+  font-size: 1.4rem;
   color: var(--title);
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
