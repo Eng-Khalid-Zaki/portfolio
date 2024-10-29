@@ -9,8 +9,6 @@ export default function ToTopButton() {
       window.scrollY > 100
         ? setButtonClasses("to-top visible")
         : setButtonClasses("to-top");
-
-      console.log("scrolling");
     });
   });
   return (

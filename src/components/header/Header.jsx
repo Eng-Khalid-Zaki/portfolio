@@ -72,9 +72,9 @@ export default function Header({ theme, toggleTheme, screenWidth }) {
         </ul>
       )}
       {theme === "dark" ? (
-        <FontAwesomeIcon icon={faSun} onClick={toggleTheme} />
-      ) : (
         <FontAwesomeIcon icon={faMoon} onClick={toggleTheme} />
+      ) : (
+        <FontAwesomeIcon icon={faSun} onClick={toggleTheme} />
       )}
     </header>
   );

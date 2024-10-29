@@ -26,11 +26,26 @@
   text-transform: capitalize;
 }
 
+.projects > .projects-type > button.light {
+  background-color: rgb(105, 107, 107);
+  color: rgb(230, 230, 230);
+}
+
 .projects > .projects-type > button:hover {
   color: var(--title);
   opacity: 1;
 }
 
+.projects > .projects-type > button.light:hover {
+  color: rgb(230, 230, 230);
+  background-color: rgb(40, 40, 40);
+}
+
+.projects > .projects-type > button.active.light {
+  background-color: rgb(28, 29, 38);
+  color: rgb(230, 230, 230);
+  font-weight: bold;
+}
 .projects > .projects-type > button.active {
   opacity: 1;
   letter-spacing: 0.6;

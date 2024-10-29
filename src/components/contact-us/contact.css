@@ -94,9 +94,19 @@
   text-transform: capitalize;
 }
 
+.contact > .contact-content > form > button.light {
+  background-color: rgb(105, 107, 107);
+  color: rgb(230, 230, 230);
+}
+
 .contact > .contact-content > form > button:hover {
   color: var(--title);
   opacity: 1;
+}
+
+.contact > .contact-content > form > button.light:hover {
+  color: rgb(230, 230, 230);
+  background-color: rgb(40, 40, 40);
 }
 
 @media screen and (max-width: 600px) {

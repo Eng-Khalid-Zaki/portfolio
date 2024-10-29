@@ -47,6 +47,10 @@ header > .fa-bars {
   transition: all 0.2s ease-in-out;
 }
 
+header > .fa-sun {
+  color: rgb(255, 165, 0);
+}
+
 header > .fa-moon:hover,
 header > .fa-sun:hover,
 header > .fa-bars:hover {

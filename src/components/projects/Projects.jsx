@@ -4,7 +4,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import image from "../../../public/React.jpeg";
 import projects from "../../util";
 import "./projects.css";
-export default function Projects() {
+export default function Projects({ theme }) {
   const [showableProjects, setshowableProjects] = useState({
     activeButton: "All Projects",
     projects: projects,
@@ -30,7 +30,8 @@ export default function Projects() {
       <div className="projects-type">
         <button
           className={
-            showableProjects.activeButton === "All Projects" ? "active" : ""
+            (theme === "light" ? "light " : "") +
+            (showableProjects.activeButton === "All Projects" ? "active" : "")
           }
           onClick={handleSetShowableProjects}
         >
@@ -38,7 +39,8 @@ export default function Projects() {
         </button>
         <button
           className={
-            showableProjects.activeButton === "HTML & CSS" ? "active" : ""
+            (theme === "light" ? "light " : "") +
+            (showableProjects.activeButton === "HTML & CSS" ? "active" : "")
           }
           onClick={handleSetShowableProjects}
         >
@@ -46,21 +48,26 @@ export default function Projects() {
         </button>
         <button
           className={
-            showableProjects.activeButton === "React & MUI" ? "active" : ""
+            (theme === "light" ? "light " : "") +
+            (showableProjects.activeButton === "React & MUI" ? "active" : "")
           }
           onClick={handleSetShowableProjects}
         >
           react & MUI
         </button>
         <button
-          className={showableProjects.activeButton === "Next" ? "active" : ""}
+          className={
+            (theme === "light" ? "light " : "") +
+            (showableProjects.activeButton === "Next" ? "active" : "")
+          }
           onClick={handleSetShowableProjects}
         >
           next
         </button>
         <button
           className={
-            showableProjects.activeButton === "Node & Express" ? "active" : ""
+            (theme === "light" ? "light " : "") +
+            (showableProjects.activeButton === "Node & Express" ? "active" : "")
           }
           onClick={handleSetShowableProjects}
         >
