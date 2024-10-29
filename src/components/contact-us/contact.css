@@ -9,14 +9,13 @@
 
 .contact > .contact-header > h3 {
   font-size: 2.1rem;
-  font-weight: 500;
   margin-right: 1rem;
   color: var(--title);
   margin-bottom: 1rem;
 }
 
 .contact > .contact-header > h3 > span {
-  color: var(--sub-title);
+  color: var(--subtitle);
   margin-right: 1rem;
   font-size: 1.8rem;
 }
@@ -26,6 +25,7 @@
   color: var(--sub-title);
   line-height: 1.65rem;
 }
+
 .contact > .contact-content {
   display: flex;
   justify-content: space-between;
@@ -58,7 +58,7 @@
   font-size: 1.1rem;
   border: 1px solid var(--border);
   border-radius: 6px;
-  background-color: #1d1c21;
+  background-color: rgba(63, 63, 70, 0.15);
   color: var(--sub-title);
   transition: all 0.3s ease-in-out;
 }
@@ -82,11 +82,11 @@
 
 .contact > .contact-content > form > button {
   border: none;
-  width: 120px;
-  padding: 0.75rem 2rem;
-  font-size: 1.05rem;
+  width: 5rem;
+  padding: 0.75rem 0;
   background-color: var(--bgHeader);
-  opacity: 0.8;
+  font-size: 1.05rem;
+  opacity: 0.5;
   color: var(--sub-title);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -96,7 +96,7 @@
 
 .contact > .contact-content > form > button:hover {
   color: var(--title);
-  background-color: var(--bgHeader);
+  opacity: 1;
 }
 
 @media screen and (max-width: 600px) {

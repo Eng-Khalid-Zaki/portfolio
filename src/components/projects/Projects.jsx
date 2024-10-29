@@ -1,128 +1,94 @@
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
 import image from "../../../public/React.jpeg";
+import projects from "../../util";
 import "./projects.css";
 export default function Projects() {
+  const [showableProjects, setshowableProjects] = useState({
+    activeButton: "All Projects",
+    projects: projects,
+  });
+  const handleSetShowableProjects = (e) => {
+    const category = e.target.innerText;
+    if (category === "All Projects") {
+      setshowableProjects({
+        activeButton: category,
+        projects: projects,
+      });
+    } else {
+      setshowableProjects({
+        activeButton: category,
+        projects: projects.filter((project) => project.category === category),
+      });
+    }
+
+    console.log(showableProjects);
+  };
   return (
     <section className="devider projects">
       <div className="projects-type">
-        <button className="active">all projects</button>
-        <button>HTML & CSS</button>
-        <button>react & MUI</button>
-        <button>next</button>
-        <button>node & express</button>
+        <button
+          className={
+            showableProjects.activeButton === "All Projects" ? "active" : ""
+          }
+          onClick={handleSetShowableProjects}
+        >
+          all projects
+        </button>
+        <button
+          className={
+            showableProjects.activeButton === "HTML & CSS" ? "active" : ""
+          }
+          onClick={handleSetShowableProjects}
+        >
+          HTML & CSS
+        </button>
+        <button
+          className={
+            showableProjects.activeButton === "React & MUI" ? "active" : ""
+          }
+          onClick={handleSetShowableProjects}
+        >
+          react & MUI
+        </button>
+        <button
+          className={showableProjects.activeButton === "Next" ? "active" : ""}
+          onClick={handleSetShowableProjects}
+        >
+          next
+        </button>
+        <button
+          className={
+            showableProjects.activeButton === "Node & Express" ? "active" : ""
+          }
+          onClick={handleSetShowableProjects}
+        >
+          node & express
+        </button>
       </div>
 
       <div className="projects-content">
-        <div className="project">
-          <img src={image} alt="" />
-          <div className="project-info">
-            <p className="project-title">Project 1</p>
-            <p className="project-description">
-              this is the first project! please take a tour in it!
-            </p>
+        {showableProjects.projects.map((project, index) => (
+          <div className="project" key={index}>
+            <img src={image} alt="" />
+            <div className="project-info">
+              <p className="project-title">{project.title}</p>
+              <p className="project-description">{project.description}</p>
+            </div>
+            <div className="project-links">
+              <a href={project.codeURL} target="_blank">
+                <button>Source Code</button>
+              </a>
+
+              <a href={project.liveURL} target="_blank">
+                <button>
+                  Visit <FontAwesomeIcon icon={faArrowRight} />
+                </button>
+              </a>
+            </div>
           </div>
-          <div className="project-links">
-            <button>Source Code</button>
-            <button>
-              Visis <FontAwesomeIcon icon={faArrowRight} />
-            </button>
-          </div>
-        </div>
-        <div className="project">
-          <img src={image} alt="" />
-          <div className="project-info">
-            <p className="project-title">Project 1</p>
-            <p className="project-description">
-              this is the first project! please take a tour in it!
-            </p>
-          </div>
-          <div className="project-links">
-            <button>Source Code</button>
-            <button>
-              Visis <FontAwesomeIcon icon={faArrowRight} />
-            </button>
-          </div>
-        </div>
-        <div className="project">
-          <img src={image} alt="" />
-          <div className="project-info">
-            <p className="project-title">Project 1</p>
-            <p className="project-description">
-              this is the first project! please take a tour in it!
-            </p>
-          </div>
-          <div className="project-links">
-            <button>Source Code</button>
-            <button>
-              Visis <FontAwesomeIcon icon={faArrowRight} />
-            </button>
-          </div>
-        </div>
-        <div className="project">
-          <img src={image} alt="" />
-          <div className="project-info">
-            <p className="project-title">Project 1</p>
-            <p className="project-description">
-              this is the first project! please take a tour in it!
-            </p>
-          </div>
-          <div className="project-links">
-            <button>Source Code</button>
-            <button>
-              Visis <FontAwesomeIcon icon={faArrowRight} />
-            </button>
-          </div>
-        </div>
-        <div className="project">
-          <img src={image} alt="" />
-          <div className="project-info">
-            <p className="project-title">Project 1</p>
-            <p className="project-description">
-              this is the first project! please take a tour in it!
-            </p>
-          </div>
-          <div className="project-links">
-            <button>Source Code</button>
-            <button>
-              Visis <FontAwesomeIcon icon={faArrowRight} />
-            </button>
-          </div>
-        </div>
-        <div className="project">
-          <img src={image} alt="" />
-          <div className="project-info">
-            <p className="project-title">Project 1</p>
-            <p className="project-description">
-              this is the first project! please take a tour in it!
-            </p>
-          </div>
-          <div className="project-links">
-            <button>Source Code</button>
-            <button>
-              Visis <FontAwesomeIcon icon={faArrowRight} />
-            </button>
-          </div>
-        </div>
-        <div className="project">
-          <img src={image} alt="" />
-          <div className="project-info">
-            <p className="project-title">Project 1</p>
-            <p className="project-description">
-              this is the first project! please take a tour in it! this is the
-              first project! please take a tour in it! this is the first
-              project! please take a tour in it!
-            </p>
-          </div>
-          <div className="project-links">
-            <button>Source Code</button>
-            <button>
-              Visit <FontAwesomeIcon icon={faArrowRight} />
-            </button>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );

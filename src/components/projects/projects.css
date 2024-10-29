@@ -29,7 +29,6 @@
 .projects > .projects-type > button:hover {
   color: var(--title);
   opacity: 1;
-  background-color: var(--bgHeader);
 }
 
 .projects > .projects-type > button.active {
@@ -52,7 +51,7 @@
 
 .projects > .projects-content > .project {
   width: 300px;
-  height: 450px;
+  height: 375px;
   border: 1px solid #5dbcfc51;
   border-radius: 6px;
   padding-bottom: 0.5rem;
@@ -96,6 +95,10 @@
   font-size: 0.9rem;
   color: var(--sub-title);
   margin-bottom: 1.1rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* Limit the text to 6 lines */
+  overflow: hidden;
 }
 
 .projects > .projects-content > .project > .project-links {
@@ -107,7 +110,7 @@
   color: var(--sub-title);
 }
 
-.projects > .projects-content > .project > .project-links > button {
+.projects > .projects-content > .project > .project-links > a > button {
   border: none;
   padding: 0.5rem 1rem;
   background-color: var(--bgHeader);
@@ -120,15 +123,25 @@
   text-align: center;
 }
 
-.projects > .projects-content > .project > .project-links > button:first-child {
+.projects
+  > .projects-content
+  > .project
+  > .project-links
+  > a:first-child
+  > button {
   width: 140px;
 }
 
-.projects > .projects-content > .project > .project-links > button:last-child {
+.projects
+  > .projects-content
+  > .project
+  > .project-links
+  > a:last-child
+  > button {
   width: 90px;
 }
 
-.projects > .projects-content > .project > .project-links > button:hover {
+.projects > .projects-content > .project > .project-links > a > button:hover {
   color: var(--title);
   font-size: 0.85rem;
   font-weight: bold;
@@ -136,7 +149,12 @@
   border: 1px solid var(--blue);
 }
 
-.projects > .projects-content > .project > .project-links > button:last-child {
+.projects
+  > .projects-content
+  > .project
+  > .project-links
+  > a:last-child
+  > button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -147,7 +165,8 @@
   > .projects-content
   > .project
   > .project-links
-  > button:last-child
+  > a:last-child
+  > button
   > svg {
   align-self: end;
 }

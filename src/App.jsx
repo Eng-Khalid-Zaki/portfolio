@@ -1,4 +1,3 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import { Link as ScrollLink, Element } from "react-scroll";
 import Header from "./components/header/Header";
@@ -6,11 +5,11 @@ import Hero from "./components/hero/Hero";
 import Projects from "./components/projects/Projects";
 import Contact from "./components/contact-us/Contact";
 import Footer from "./components/footer/Footer";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretUp } from "@fortawesome/free-solid-svg-icons";
+import ToTopButton from "./components/to-top-button/ToTopButton";
 
 function App() {
-  const [theme, setTheme] = useState("dark");
+  let currentTheme = localStorage.getItem("theme");
+  const [theme, setTheme] = useState(currentTheme ?? "dark");
   const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -19,8 +18,25 @@ function App() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    if (theme === "dark") {
+      document.body.classList.remove("light");
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+      document.body.classList.add("light");
+    }
+  }, [theme]);
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
+    if (theme === "dark") {
+      document.body.classList.remove("light");
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+      document.body.classList.add("light");
+    }
+    localStorage.setItem("theme", theme === "dark" ? "dark" : "light");
   };
 
   return (
@@ -34,9 +50,7 @@ function App() {
       <Contact theme={theme} screenWidth={width} />
       <Footer theme={theme} screenWidth={width} />
       <ScrollLink to="top" smooth={true} duration={500}>
-        <button className="to-top">
-          <FontAwesomeIcon icon={faCaretUp} />
-        </button>
+        <ToTopButton />
       </ScrollLink>
     </div>
   );
