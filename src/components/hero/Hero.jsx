@@ -2,12 +2,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { faGithubAlt, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import "./hero.css";
+import heroImg from "/public/me.jpg";
 export default function Hero() {
   return (
     <section className="devider hero">
       <div className="hero-content">
         <div className="hero-avatar">
-          <img src="./public/me.jpg" alt="" />
+          <img src={heroImg} alt="" />
           <FontAwesomeIcon icon={faCircleCheck} />
         </div>
         <div className="hero-info">
