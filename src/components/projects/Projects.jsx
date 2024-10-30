@@ -85,11 +85,13 @@ export default function Projects({ theme }) {
             </div>
             <div className="project-links">
               <a href={project.codeURL} target="_blank">
-                <button>Source Code</button>
+                <button className={theme === "light" ? "light " : ""}>
+                  Source Code
+                </button>
               </a>
 
               <a href={project.liveURL} target="_blank">
-                <button>
+                <button className={theme === "light" ? "light " : ""}>
                   Visit <FontAwesomeIcon icon={faArrowRight} />
                 </button>
               </a>

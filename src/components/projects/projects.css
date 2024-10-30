@@ -137,6 +137,21 @@
   text-align: center;
 }
 
+.projects > .projects-content > .project > .project-links > a > button.light {
+  background-color: rgb(105, 107, 107);
+  color: rgb(230, 230, 230);
+}
+
+.projects
+  > .projects-content
+  > .project
+  > .project-links
+  > a
+  > button.light:hover {
+  color: rgb(230, 230, 230);
+  background-color: rgb(40, 40, 40);
+}
+
 .projects
   > .projects-content
   > .project

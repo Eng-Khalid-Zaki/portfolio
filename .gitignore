@@ -1,1 +1,13 @@
-node_modules
+# Dependencies
+node_modules/
+
+# Build output
+build/
+
+# Logs
+logs/
+*.log
+
+# System files
+.DS_Store
+*.swp
