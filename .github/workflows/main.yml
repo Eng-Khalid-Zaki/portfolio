@@ -41,5 +41,11 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
+      - name: Install Firebase Tools
+        run: npm install -g firebase-tools
+
+      - name: Check Firebase Installation
+        run: firebase --version
+
       - name: Deploy to Firebase
         run: firebase deploy --only hosting --token ${{ secrets.FIREBASE_TOKEN }}
