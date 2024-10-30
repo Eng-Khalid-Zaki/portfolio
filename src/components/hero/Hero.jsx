@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { faGithubAlt, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import "./hero.css";
-export default function Hero({ theme, screenWidth }) {
+export default function Hero() {
   return (
     <section className="devider hero">
       <div className="hero-content">
@@ -23,7 +23,6 @@ export default function Hero({ theme, screenWidth }) {
           <FontAwesomeIcon icon={faLinkedinIn} />
         </div>
       </div>
-      <div className="hero-animation">ANIMATION</div>
     </section>
   );
 }

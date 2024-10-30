@@ -1,17 +1,20 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import React from "react";
+import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "emailjs-com";
 import "./contact.css";
 
-export default function Contact({ theme, screenWidth }) {
+export default function Contact({ theme }) {
+  const [messageStatus, setMessageStatus] = useState(null);
   const formik = useFormik({
     initialValues: { email: "", message: "" },
     validationSchema: Yup.object({
-      email: Yup.string().email("Invalid email address").required("Required"),
-      message: Yup.string().required("Required"),
+      email: Yup.string()
+        .email("Invalid email address")
+        .required("This field is required"),
+      message: Yup.string().required("This field is required"),
     }),
     onSubmit: (values, { resetForm }) => {
       console.log("Form values:", values);
@@ -25,12 +28,12 @@ export default function Contact({ theme, screenWidth }) {
         .then(
           (response) => {
             console.log("SUCCESS!", response.status, response.text);
-            alert("Message sent successfully!");
+            setMessageStatus("sent");
             resetForm(); // Reset the form after successful submission
           },
           (error) => {
             console.error("FAILED...", error);
-            alert("Failed to send message. Error: " + error.text);
+            setMessageStatus("failed");
           }
         );
     },
@@ -55,6 +58,7 @@ export default function Contact({ theme, screenWidth }) {
           <div>
             <label htmlFor="email">Email Address</label>
             <input
+              autoComplete="off"
               id="email"
               name="email"
               type="email"
@@ -83,8 +87,17 @@ export default function Contact({ theme, screenWidth }) {
             Submit
           </button>
         </form>
-        {screenWidth > 768 && <div className="animation">ANIMATION</div>}
       </div>
+      {messageStatus === "sent" && (
+        <div className="message-sent">
+          Message sent successfully! Thank you!
+        </div>
+      )}
+      {messageStatus === "failed" && (
+        <div className="message-failed">
+          Message failed to send. Please try again later.
+        </div>
+      )}
     </section>
   );
 }

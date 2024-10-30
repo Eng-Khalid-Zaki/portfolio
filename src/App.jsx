@@ -17,7 +17,6 @@ function App() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
   useEffect(() => {
     if (theme === "dark") {
       document.body.classList.remove("light");
@@ -32,11 +31,12 @@ function App() {
     if (theme === "dark") {
       document.body.classList.remove("light");
       document.body.classList.add("dark");
+      localStorage.setItem("theme", "light");
     } else {
       document.body.classList.remove("dark");
       document.body.classList.add("light");
+      localStorage.setItem("theme", "dark");
     }
-    localStorage.setItem("theme", theme === "dark" ? "dark" : "light");
   };
 
   return (
@@ -44,11 +44,10 @@ function App() {
       <Element name="top">
         <Header theme={theme} toggleTheme={toggleTheme} screenWidth={width} />
       </Element>
-      <Hero theme={theme} screenWidth={width} />
-
-      <Projects theme={theme} screenWidth={width} />
-      <Contact theme={theme} screenWidth={width} />
-      <Footer theme={theme} screenWidth={width} />
+      <Hero />
+      <Projects theme={theme} />
+      <Contact theme={theme} />
+      <Footer />
       <ScrollLink to="top" smooth={true} duration={500}>
         <ToTopButton />
       </ScrollLink>
