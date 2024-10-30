@@ -1,18 +1,21 @@
 import "./header.css";
 import { useState, useEffect } from "react";
 import Modal from "../modal/Modal";
+import { Link as ScrollLink } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon } from "@fortawesome/free-solid-svg-icons";
-import { faSun } from "@fortawesome/free-solid-svg-icons";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import {
+  faMoon,
+  faSun,
+  faBars,
+  faXmark,
+} from "@fortawesome/free-solid-svg-icons";
 
 let headerClasses = "";
-export default function Header({ theme, toggleTheme, screenWidth }) {
+
+export default function Header({ theme, toggleTheme, screenWidth, names }) {
   const [open, setOpen] = useState(false);
 
   const openHandler = () => setOpen(true);
-
   const closeHandler = () => setOpen(false);
 
   useEffect(() => {
@@ -23,6 +26,7 @@ export default function Header({ theme, toggleTheme, screenWidth }) {
       headerClasses = "small-screen";
     }
   });
+
   return (
     <header className={headerClasses}>
       {screenWidth <= 700 && (
@@ -35,19 +39,24 @@ export default function Header({ theme, toggleTheme, screenWidth }) {
               <FontAwesomeIcon icon={faXmark} onClick={closeHandler} />
             </li>
             <li>
-              <a>About</a>
+              <ScrollLink to={names[0]} smooth={true} duration={500}>
+                About
+              </ScrollLink>
             </li>
             <li>
-              <a>Articles</a>
+              <ScrollLink to={names[1]} smooth={true} duration={500}>
+                Projects
+              </ScrollLink>
             </li>
             <li>
-              <a>Projects</a>
+              <ScrollLink to="speaking" smooth={true} duration={500}>
+                Speaking
+              </ScrollLink>
             </li>
             <li>
-              <a>Speaking</a>
-            </li>
-            <li>
-              <a>Contact</a>
+              <ScrollLink to={names[2]} smooth={true} duration={500}>
+                Contact
+              </ScrollLink>
             </li>
           </ul>
         </Modal>
@@ -55,19 +64,19 @@ export default function Header({ theme, toggleTheme, screenWidth }) {
       {screenWidth > 700 && (
         <ul>
           <li>
-            <a>About</a>
+            <ScrollLink to={names[0]} smooth={true} duration={500}>
+              About
+            </ScrollLink>
           </li>
           <li>
-            <a>Articles</a>
+            <ScrollLink to={names[1]} smooth={true} duration={500}>
+              Projects
+            </ScrollLink>
           </li>
           <li>
-            <a>Projects</a>
-          </li>
-          <li>
-            <a>Speaking</a>
-          </li>
-          <li>
-            <a>Contact</a>
+            <ScrollLink to={names[2]} smooth={true} duration={500}>
+              Contact
+            </ScrollLink>
           </li>
         </ul>
       )}

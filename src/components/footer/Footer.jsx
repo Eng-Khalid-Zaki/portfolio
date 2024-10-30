@@ -1,20 +1,24 @@
+import { Link as ScrollLink } from "react-scroll";
 import "./footer.css";
-export default function Footer() {
+export default function Footer({ names }) {
   return (
     <footer>
       <div>
         <ul>
           <li>
-            <a href="#">About</a>
+            <ScrollLink to={names[0]} smooth={true} duration={500}>
+              About
+            </ScrollLink>
           </li>
           <li>
-            <a href="#">Projects</a>
+            <ScrollLink to={names[1]} smooth={true} duration={500}>
+              Projects
+            </ScrollLink>
           </li>
           <li>
-            <a href="#">Speaking</a>
-          </li>
-          <li>
-            <a href="#">Uses</a>
+            <ScrollLink to={names[2]} smooth={true} duration={500}>
+              Contact
+            </ScrollLink>
           </li>
         </ul>
       </div>

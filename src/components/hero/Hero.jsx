@@ -24,8 +24,15 @@ export default function Hero() {
           </p>
         </div>
         <div className="hero-social">
-          <FontAwesomeIcon icon={faGithubAlt} />
-          <FontAwesomeIcon icon={faLinkedinIn} />
+          <a href="https://github.com/Eng-Khalid-Zaki" target="_blank">
+            <FontAwesomeIcon icon={faGithubAlt} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/khalid-zaki-0293832a4"
+            target="_blank"
+          >
+            <FontAwesomeIcon icon={faLinkedinIn} />
+          </a>
         </div>
       </div>
     </section>

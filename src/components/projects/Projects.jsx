@@ -78,7 +78,7 @@ export default function Projects({ theme }) {
       <div className="projects-content">
         {showableProjects.projects.map((project, index) => (
           <div className="project" key={index}>
-            <img src={image} alt="" />
+            <img src={project.image} alt="" />
             <div className="project-info">
               <p className="project-title">{project.title}</p>
               <p className="project-description">{project.description}</p>

@@ -42,12 +42,23 @@ function App() {
   return (
     <div className="container">
       <Element name="top">
-        <Header theme={theme} toggleTheme={toggleTheme} screenWidth={width} />
+        <Header
+          theme={theme}
+          toggleTheme={toggleTheme}
+          screenWidth={width}
+          names={["hero", "projects", "contact"]}
+        />
       </Element>
-      <Hero />
-      <Projects theme={theme} />
-      <Contact theme={theme} />
-      <Footer />
+      <Element name="hero">
+        <Hero />
+      </Element>
+      <Element name="projects">
+        <Projects theme={theme} />
+      </Element>
+      <Element name="contact">
+        <Contact theme={theme} />
+      </Element>
+      <Footer names={["hero", "projects", "contact"]} />
       <ScrollLink to="top" smooth={true} duration={500}>
         <ToTopButton />
       </ScrollLink>
