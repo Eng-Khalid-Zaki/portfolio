@@ -1,6 +1,8 @@
 import reactQuizApp from "/reactQuizApp.png";
-import ticTacToe from "/ticTacToe.png";
 import timeChallenger from "/timeChallenger.png";
+import ticTacToe from "/ticTacToe.png";
+import HTMLCSSTemplate2 from "/HTML-CSS-Template-2.png";
+import HTMLCSSTemplate1 from "/HTML-CSS-Template-1.png";
 const projects = [
   {
     image: reactQuizApp,
@@ -28,6 +30,24 @@ const projects = [
       "a timeless classic, pits two players against each other in a quick-thinking battle of wits. Each player takes turns marking a 3x3 grid, either as X or O, aiming to align three of their symbols vertically, horizontally, or diagonally.",
     liveURL: "https://tic-tac-toe-fawn-ten.vercel.app/",
     codeURL: "https://github.com/Eng-Khalid-Zaki/Tic-Tac-Toe",
+  },
+  {
+    image: HTMLCSSTemplate2,
+    category: "HTML & CSS",
+    title: "HTML & CSS Template 2",
+    description:
+      "This is a demo website template I made as a second practice after finishing studying HTML and CSS ",
+    liveURL: "https://eng-khalid-zaki.github.io/HTML-CSS-Template-2/",
+    codeURL: "https://github.com/Eng-Khalid-Zaki/HTML-CSS-Template-2",
+  },
+  {
+    image: HTMLCSSTemplate1,
+    category: "HTML & CSS",
+    title: "HTML & CSS Template 1",
+    description:
+      "This is a demo website template I made as a first practice after finishing studying HTML and CSS ",
+    liveURL: "https://eng-khalid-zaki.github.io/HTML-CSS-Template-1/",
+    codeURL: "https://github.com/Eng-Khalid-Zaki/HTML-CSS-Template-1",
   },
 ];
 

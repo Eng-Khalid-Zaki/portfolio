@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import image from "../../../public/React.jpeg";
 import projects from "../../util";
 import "./projects.css";
 export default function Projects({ theme }) {
@@ -76,6 +75,9 @@ export default function Projects({ theme }) {
       </div>
 
       <div className="projects-content">
+        {showableProjects.projects.length === 0 && (
+          <p className="no-project">There is no projects in this section!</p>
+        )}
         {showableProjects.projects.map((project, index) => (
           <div className="project" key={index}>
             <img src={project.image} alt="" />
