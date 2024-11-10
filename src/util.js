@@ -1,9 +1,19 @@
+import projectManagement from "/projectManagement.png";
 import reactQuizApp from "/reactQuizApp.png";
 import timeChallenger from "/timeChallenger.png";
 import ticTacToe from "/ticTacToe.png";
 import HTMLCSSTemplate2 from "/HTML-CSS-Template-2.png";
 import HTMLCSSTemplate1 from "/HTML-CSS-Template-1.png";
 const projects = [
+  {
+    image: projectManagement,
+    category: "React & MUI",
+    title: "Project Management App",
+    description:
+      "The Project Management App is a user-friendly tool designed to streamline project organization and task management. This app empowers users to create and manage projects effortlessly, ensuring that all tasks are properly tracked and completed.",
+    liveURL: "https://project-management-eta-wine.vercel.app/",
+    codeURL: "https://github.com/Eng-Khalid-Zaki/project-management",
+  },
   {
     image: reactQuizApp,
     category: "React & MUI",
