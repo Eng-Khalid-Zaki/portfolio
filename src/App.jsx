@@ -3,7 +3,6 @@ import { Link as ScrollLink, Element } from "react-scroll";
 import Header from "./components/header/Header";
 import Hero from "./components/hero/Hero";
 import Projects from "./components/projects/Projects";
-import Contact from "./components/contact-us/Contact";
 import Footer from "./components/footer/Footer";
 import ToTopButton from "./components/to-top-button/ToTopButton";
 
@@ -46,7 +45,7 @@ function App() {
           theme={theme}
           toggleTheme={toggleTheme}
           screenWidth={width}
-          names={["hero", "projects", "contact"]}
+          names={["hero", "projects"]}
         />
       </Element>
       <Element name="hero">
@@ -55,10 +54,7 @@ function App() {
       <Element name="projects">
         <Projects theme={theme} />
       </Element>
-      <Element name="contact">
-        <Contact theme={theme} />
-      </Element>
-      <Footer names={["hero", "projects", "contact"]} />
+      <Footer names={["hero", "projects"]} />
       <ScrollLink to="top" smooth={true} duration={500}>
         <ToTopButton />
       </ScrollLink>

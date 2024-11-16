@@ -53,11 +53,6 @@ export default function Header({ theme, toggleTheme, screenWidth, names }) {
                 Speaking
               </ScrollLink>
             </li>
-            <li>
-              <ScrollLink to={names[2]} smooth={true} duration={500}>
-                Contact
-              </ScrollLink>
-            </li>
           </ul>
         </Modal>
       )}
@@ -71,11 +66,6 @@ export default function Header({ theme, toggleTheme, screenWidth, names }) {
           <li>
             <ScrollLink to={names[1]} smooth={true} duration={500}>
               Projects
-            </ScrollLink>
-          </li>
-          <li>
-            <ScrollLink to={names[2]} smooth={true} duration={500}>
-              Contact
             </ScrollLink>
           </li>
         </ul>

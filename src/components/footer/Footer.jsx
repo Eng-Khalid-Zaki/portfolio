@@ -15,11 +15,6 @@ export default function Footer({ names }) {
               Projects
             </ScrollLink>
           </li>
-          <li>
-            <ScrollLink to={names[2]} smooth={true} duration={500}>
-              Contact
-            </ScrollLink>
-          </li>
         </ul>
       </div>
       <p>© 2024 Spencer Sharp, All rights reserved</p>
