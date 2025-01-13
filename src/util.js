@@ -4,7 +4,17 @@ import timeChallenger from "/timeChallenger.png";
 import ticTacToe from "/ticTacToe.png";
 import HTMLCSSTemplate2 from "/HTML-CSS-Template-2.png";
 import HTMLCSSTemplate1 from "/HTML-CSS-Template-1.png";
+import FoodiesApp from "/FoodiesApp.png";
 const projects = [
+  {
+    image: FoodiesApp,
+    category: "Next",
+    title: "Foodies App",
+    description:
+      "Unleash your culinary creativity with Foodies App, the ultimate platform for food lovers and home chefs. Whether you're a seasoned cook or a kitchen newbie, our app makes it easy to share your favorite meals with a vibrant community of food enthusiasts.",
+    liveURL: "https://foodies-app-three.vercel.app/",
+    codeURL: "https://github.com/Eng-Khalid-Zaki/foodies-app",
+  },
   {
     image: projectManagement,
     category: "React & MUI",
